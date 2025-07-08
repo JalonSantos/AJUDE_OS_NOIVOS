@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ajude os noivos ❤️</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      color: #cc3366;
+      margin-bottom: 10px;
+    }
+
+    p {
+      max-width: 90%;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 250px;
+      max-width: 80%;
+      margin-bottom: 20px;
+    }
+
+    .pix-box {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 90%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .pix-key {
+      font-size: 1.1rem;
+      word-wrap: break-word;
+      margin: 10px 0;
+    }
+
+    button {
+      background-color: #cc3366;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #b02c5a;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ajude os noivos ❤️</h1>
+  <p>Se quiser nos presentear, é só escanear o QR Code abaixo ou copiar a chave PIX:</p>
+
+  <div class="pix-box">
+    <img src="QRCODE DOS NOIVOS.png" alt="QR Code PIX" />
+    <div class="pix-key" id="pixKey">2c2fe976-b413-44b4-92eb-7ebb080c9003</div>
+    <button onclick="copyPix()">Copiar chave PIX</button>
+  </div>
+
+  <footer>Com carinho, Jalon & Aline 💍</footer>
+
+  <script>
+    function copyPix() {
+      const text = document.getElementById("pixKey").innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Chave PIX copiada!");
+      });
+    }
+  </script>
+</body>
+</html>
